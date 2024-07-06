@@ -1,7 +1,7 @@
 terraform {
    backend "s3" {
      bucket = "jenkins-kaizen"
-     key = "terraform.tfstate"
+     key = "${var.region}/${var.az}/terraform.tfstate"
      region = "us-east-2"
    }
 }
